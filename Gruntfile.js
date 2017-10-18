@@ -28,8 +28,18 @@ module.exports = function(grunt) {
 				files: [
 					{
 						src: 'src/vendor/jquery/dist/jquery.min.js',
-						dest: 'dist/js/vendor/jquery.min.js'
-					}
+						dest: 'dist/vendor/jquery.min.js'
+					},
+          {
+						src: 'src/vendor/normalize-css/normalize.css',
+						dest: 'dist/vendor/normalize.css'
+					},
+          {
+            expand: true,
+            cwd: 'src/assets',
+            src: '**',
+            dest: 'dist/assets/'
+          }
         ]
       }
     },

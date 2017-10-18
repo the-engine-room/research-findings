@@ -1,5 +1,177 @@
+/** Variables **/
+/** Fonts **/
+.sintony {
+  font-family: "Sintony", sans-serif;
+  font-weight: bold;
+}
+.clearsans {
+  font-family: "Clear Sans Regular", sans-serif;
+}
+.clearsans-bold {
+  font-family: "Clear Sans Bold", sans-serif;
+}
+.shortline-hr {
+  width: calc(25vw / 3);
+}
+/** Main rules **/
 *,
 ::after,
 ::before {
   box-sizing: border-box;
+  line-height: 180%;
+}
+/** Body **/
+html,
+body {
+  text-align: center;
+}
+div.container {
+  margin: 0px 15% 0px 10%;
+  width: 75%;
+  text-align: left;
+}
+/** Titles **/
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+}
+h1 {
+  font-family: "Sintony", sans-serif;
+  font-weight: bold;
+  color: #380497;
+  font-size: 36px;
+}
+p.tagline {
+  font-family: "Clear Sans Regular", sans-serif;
+  color: #380497;
+  font-size: 18px;
+}
+h2 {
+  font-family: "Clear Sans Bold", sans-serif;
+}
+/** Sections **/
+div.container > header {
+  margin-top: 43px;
+  height: calc(100vw / 3);
+  min-height: 250px;
+  position: relative;
+}
+div.container > header:before {
+  content: ' ';
+  font-size: 1px;
+  display: block;
+  float: left;
+  width: 6px;
+  background: #007FFF;
+  height: calc(100vw / 4);
+}
+div.container > header h1,
+div.container > header p.tagline {
+  padding: 0px 27px;
+}
+div.container > header .see-all-content {
+  color: #007FFF;
+  font-size: 18px;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  font-family: "Sintony", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+div.container > header .see-all-content:after {
+  width: calc(25vw / 3);
+  content: ' ';
+  height: 6px;
+  float: right;
+  background: #007FFF;
+  clear: both;
+  margin-top: 24px;
+  right: 0;
+  position: absolute;
+}
+.message {
+  height: calc(100vw / 2);
+  min-height: 250px;
+  position: relative;
+}
+.message article header {
+  width: 100%;
+  height: 100%;
+  display: block;
+  clear: both;
+}
+.message article header:after {
+  display: block;
+  content: ' ';
+  clear: both;
+}
+.message article header .counter {
+  vertical-align: bottom;
+  width: 36px;
+  font-size: 36px;
+  float: left;
+  height: 86px;
+  padding-top: 29px;
+  font-family: "Sintony", sans-serif;
+  font-weight: bold;
+  color: #007FFF;
+}
+.message article header h2 {
+  font-family: "Sintony", sans-serif;
+  font-weight: bold;
+  color: #007FFF;
+  font-size: 24px;
+  width: calc(100% - 36px);
+  float: left;
+  height: 86px;
+  margin-bottom: 0px;
+}
+.message article .content {
+  display: block;
+  float: left;
+  width: calc(50% - 72px);
+  padding: 15px 18px;
+  margin: 0px 36px;
+  color: #000073;
+  font-family: "Clear Sans Regular", sans-serif;
+}
+.message article .content .toggle {
+  font-family: "Sintony", sans-serif;
+  font-weight: bold;
+  color: #380497;
+  font-size: 18px;
+  position: relative;
+  text-decoration: none;
+}
+.message article .content .toggle:after {
+  width: calc(25vw / 3);
+  content: ' ';
+  height: 6px;
+  float: right;
+  background: #380497;
+  clear: both;
+  margin-top: 24px;
+  left: 0;
+  position: absolute;
+}
+.message article .content .hilite {
+  font-family: "Clear Sans Bold", sans-serif;
+}
+@media screen and (max-width: 720px) {
+  *,
+  ::after,
+  ::before {
+    line-height: 140%;
+  }
+  div.container > header,
+  .message {
+    height: auto;
+    min-height: 100vh;
+  }
+  a.see-all-content {
+    position: relative;
+  }
 }

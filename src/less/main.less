@@ -1,4 +1,157 @@
 @import "variables";
 @import "mixins";
 
-*, ::after, ::before { box-sizing: border-box; }
+
+
+/** Main rules **/
+*, ::after, ::before {
+  box-sizing: border-box;
+  line-height: 180%;
+}
+
+
+/** Body **/
+html, body {
+  text-align: center;
+}
+
+div.container {
+  margin: 0px 15% 0px 10%;
+  width: 75%;
+  text-align: left;
+}
+
+
+/** Titles **/
+h1, h2, h3, h4 {
+  margin-top: 0;
+}
+h1 {
+  .sintony;
+  color: @violet;
+  font-size: 36px;
+}
+p.tagline {
+  .clearsans;
+  color: @violet;
+  font-size: 18px;
+}
+h2 { .clearsans-bold; }
+
+
+/** Sections **/
+div.container > header {
+  margin-top: 43px;
+  height: ~"calc(100vw / 3)";
+  min-height: 250px;
+  position: relative;
+  &:before {
+    content: ' ';
+    font-size: 1px;
+    display: block;
+    float: left;
+    width: 6px;
+    background: @blue;
+    height: ~"calc(100vw / 4)";
+  }
+
+  h1, p.tagline {
+    padding: 0px 27px;
+  }
+  .see-all-content {
+    color: @blue;
+    font-size: 18px;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    .sintony;
+    text-decoration: none;
+    &:after {
+      .shortline-hr;
+      content: ' ';
+      height: 6px;
+      float: right;
+      background: @blue;
+      clear: both;
+      margin-top: 24px;
+      right: 0;
+      position: absolute;
+    }
+  }
+}
+
+.message {
+  height: ~"calc(100vw / 2)";
+  min-height: 250px;
+  position: relative;
+  article {
+    header {
+      width: 100%;
+      height: 100%;
+      display: block;
+      clear: both;
+      &:after {
+        display: block;
+        content: ' ';
+        clear: both;
+      }
+      .counter {
+        vertical-align: bottom;
+        width: 36px;
+        font-size: 36px;
+        float: left;
+        height: 86px;
+        padding-top: 29px;
+        .sintony;
+        color: @blue;
+      }
+      h2 {
+        .sintony;
+        color: @blue;
+        font-size: 24px;
+        width: ~"calc(100% - 36px)";
+        float: left;
+        height: 86px;
+        margin-bottom: 0px;
+
+      }
+    }
+    .content {
+      display: block;
+      float: left;
+      width: ~"calc(50% - 72px)";
+      padding: 15px 18px;
+      margin: 0px 36px;
+      color: @purple;
+      .clearsans;
+
+      .toggle {
+        .sintony;
+        color: @violet;
+        font-size: 18px;
+        position: relative;
+        text-decoration: none;
+        &:after {
+          .shortline-hr;
+          content: ' ';
+          height: 6px;
+          float: right;
+          background: @violet;
+          clear: both;
+          margin-top: 24px;
+          left: 0;
+          position: absolute;
+        }
+      }
+      .hilite {
+        .clearsans-bold;
+      }
+
+    }
+  }
+
+}
+
+
+
+@import "mobile";
