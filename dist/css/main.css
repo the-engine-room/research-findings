@@ -13,6 +13,17 @@
 .shortline-hr {
   width: calc(25vw / 3);
 }
+.shortline-vr {
+  height: calc(25vw / 3);
+}
+.hidden {
+  display: none;
+}
+.transition {
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
 /** Main rules **/
 *,
 ::after,
@@ -130,6 +141,7 @@ div.container > header .see-all-content:after {
   margin-bottom: 0px;
 }
 .message article .content {
+  position: relative;
   display: block;
   float: left;
   width: calc(50% - 72px);
@@ -137,6 +149,35 @@ div.container > header .see-all-content:after {
   margin: 0px 36px;
   color: #000073;
   font-family: "Clear Sans Regular", sans-serif;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+.message article .content:before {
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  height: 0px;
+  width: 6px;
+  background: transparent;
+  position: absolute;
+  display: block;
+  left: 0px;
+  top: 15px;
+  content: ' ';
+}
+.message article .content.shown:before {
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  height: calc(25vw / 3);
+  width: 6px;
+  content: ' ';
+  background: #380497;
+  position: absolute;
+  display: block;
+  left: 0px;
+  top: 15px;
 }
 .message article .content .toggle {
   font-family: "Sintony", sans-serif;
@@ -145,6 +186,9 @@ div.container > header .see-all-content:after {
   font-size: 18px;
   position: relative;
   text-decoration: none;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 .message article .content .toggle:after {
   width: calc(25vw / 3);
@@ -157,8 +201,17 @@ div.container > header .see-all-content:after {
   left: 0;
   position: absolute;
 }
+.message article .content .toggle.toggle-clear:after {
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  width: 0px;
+  background: transparent;
+}
 .message article .content .hilite {
   font-family: "Clear Sans Bold", sans-serif;
+  line-height: 150%;
+  margin-top: 10px;
 }
 @media screen and (max-width: 720px) {
   *,

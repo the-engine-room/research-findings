@@ -2,7 +2,6 @@
 @import "mixins";
 
 
-
 /** Main rules **/
 *, ::after, ::before {
   box-sizing: border-box;
@@ -117,6 +116,7 @@ div.container > header {
       }
     }
     .content {
+      position: relative;
       display: block;
       float: left;
       width: ~"calc(50% - 72px)";
@@ -124,6 +124,29 @@ div.container > header {
       margin: 0px 36px;
       color: @purple;
       .clearsans;
+      .transition;
+      &:before {
+        .transition;
+        height: 0px;
+        width: 6px;
+        background: transparent;
+        position: absolute;
+        display: block;
+        left: 0px;
+        top: 15px;
+        content: ' ';
+      }
+      &.shown:before {
+        .transition;
+        .shortline-vr;
+        width: 6px;
+        content: ' ';
+        background: @violet;
+        position: absolute;
+        display: block;
+        left: 0px;
+        top: 15px;
+      }
 
       .toggle {
         .sintony;
@@ -131,6 +154,7 @@ div.container > header {
         font-size: 18px;
         position: relative;
         text-decoration: none;
+        .transition;
         &:after {
           .shortline-hr;
           content: ' ';
@@ -142,9 +166,16 @@ div.container > header {
           left: 0;
           position: absolute;
         }
+        &.toggle-clear:after {
+          .transition;
+          width: 0px;
+          background: transparent;
+        }
       }
       .hilite {
         .clearsans-bold;
+        line-height: 150%;
+        margin-top: 10px;
       }
 
     }
