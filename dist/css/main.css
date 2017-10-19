@@ -35,6 +35,7 @@
 html,
 body {
   text-align: center;
+  background: #FFF7FF;
 }
 div.container {
   margin: 0px 15% 0px 10%;
