@@ -100,13 +100,13 @@ div.container > header .see-all-content:after {
   float: right;
   background: #007FFF;
   clear: both;
-  margin-top: 24px;
+  margin-top: 28px;
   right: 0;
   position: absolute;
 }
 .message {
-  height: calc(100vw / 2);
-  min-height: 250px;
+  height: auto;
+  min-height: calc(100vw / 2);
   position: relative;
 }
 .message article header {
@@ -198,7 +198,7 @@ div.container > header .see-all-content:after {
   float: right;
   background: #380497;
   clear: both;
-  margin-top: 24px;
+  margin-top: 28px;
   left: 0;
   position: absolute;
 }
@@ -232,6 +232,9 @@ footer {
   font-size: 18px;
   border-top: 6px solid #007FFF;
   padding: 25px 50px;
+  display: block;
+  clear: both;
+  margin-top: 30px;
 }
 footer .made-by {
   width: 33%;
