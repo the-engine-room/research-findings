@@ -208,10 +208,77 @@ div.container > header .see-all-content:after {
   width: 0px;
   background: transparent;
 }
+.message article .content .toggle:hover {
+  color: #000073;
+}
+.message article .content .toggle:hover:after {
+  background: #000073;
+}
 .message article .content .hilite {
   font-family: "Clear Sans Bold", sans-serif;
   line-height: 150%;
   margin-top: 10px;
+}
+.message article .content a.research-link {
+  font-family: "Clear Sans Regular", sans-serif;
+  color: #380497;
+  text-decoration: underline;
+}
+footer {
+  font-family: "Clear Sans Regular", sans-serif;
+  color: #000073;
+  text-align: left;
+  font-size: 18px;
+  border-top: 6px solid #007FFF;
+  padding: 25px 50px;
+}
+footer .made-by {
+  width: 33%;
+  margin-right: 9%;
+  display: block;
+  float: left;
+}
+footer .made-by .logo {
+  width: 50%;
+  margin: 20px 0px;
+  float: left;
+  padding: 0px 15px;
+  text-align: center;
+}
+footer .made-by .logo img {
+  height: auto;
+  max-width: 100%;
+}
+footer .made-by .license {
+  font-size: 12px;
+}
+footer .made-by .license a {
+  color: #000073;
+}
+footer .partners {
+  width: 58%;
+  display: block;
+  float: left;
+}
+footer .partners a {
+  display: inline-block;
+  width: 50%;
+  float: left;
+  clear: none;
+  color: #007FFF;
+  text-decoration: none;
+}
+footer .partners a:hover {
+  text-decoration: underline;
+}
+footer .partners a:nth-child(2) {
+  text-align: right;
+}
+footer .liner,
+footer .logo-label {
+  display: block;
+  margin: 15px 0px;
+  clear: both;
 }
 @media screen and (max-width: 720px) {
   *,
@@ -224,7 +291,16 @@ div.container > header .see-all-content:after {
     height: auto;
     min-height: 100vh;
   }
-  a.see-all-content {
+  div.container > header a.see-all-content {
     position: relative;
+  }
+  .message article .content {
+    width: calc(100% - 72px);
+  }
+  footer .made-by,
+  footer .partners {
+    width: 100%;
+    margin: 15px 0px;
+    clear: both;
   }
 }

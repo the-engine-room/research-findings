@@ -171,18 +171,80 @@ div.container > header {
           width: 0px;
           background: transparent;
         }
+        &:hover {
+          color: @purple;
+          &:after {
+            background: @purple;
+          }
+        }
       }
       .hilite {
         .clearsans-bold;
         line-height: 150%;
         margin-top: 10px;
       }
-
+      a.research-link {
+        .clearsans;
+        color: @violet;
+        text-decoration: underline;
+      }
     }
   }
 
 }
 
-
+footer {
+  .clearsans;
+  color: @purple;
+  text-align: left;
+  font-size: 18px;
+  border-top: 6px solid @blue;
+  padding: 25px 50px;
+  .made-by {
+    width: 33%;
+    margin-right: 9%;
+    display: block;
+    float: left;
+    .logo {
+      width: 50%;
+      margin: 20px 0px;
+      float: left;
+      padding: 0px 15px;
+      text-align: center; 
+      img {
+        height: auto;
+        max-width: 100%;
+      }
+    }
+    .license {
+      font-size: 12px;
+      a { color: @purple; }
+    }
+  }
+  .partners {
+    width: 58%;
+    display: block;
+    float: left;
+    a {
+      display: inline-block;
+      width: 50%;
+      float: left;
+      clear: none;
+      color: @blue;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+      &:nth-child(2){
+        text-align: right;
+      }
+    }
+  }
+  .liner, .logo-label {
+    display: block;
+    margin: 15px 0px;
+    clear: both;
+  }
+}
 
 @import "mobile";
