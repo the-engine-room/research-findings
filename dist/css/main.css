@@ -112,6 +112,12 @@ div.container > header .see-all-content:after {
 .message article {
   clear: both;
 }
+.message article:after,
+.message article:before {
+  content: ' ';
+  display: table;
+  clear: both;
+}
 .message article header {
   width: 100%;
   height: 100%;
