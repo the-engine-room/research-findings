@@ -2,22 +2,44 @@
   *, ::after, ::before {
     line-height: 140%;
   }
+
+  div.container {
+    margin: 0px 0px 0px 0px;
+    width: 95%;
+    text-align: left;
+  }
+  h1 {
+    .sintony;
+    color: @violet;
+    font-size: 24px;
+  }
   div.container > header, .message {
     height: auto;
     min-height: 100vh;
   }
   div.container > header a.see-all-content {
     position: relative;
+    bottom: 0px;
+    right: 0px;
+    display: block; float: right;
+  }
+  .message article header h2 {
+    font-size: 22px;
+    height: auto;
   }
   .message article .content {
-    width: ~"calc(100% - 72px)";
+    width: ~"calc(100% - 36px)";
+    margin-right: 0px;
+    padding-right: 0px;
   }
 
   footer {
+    font-size: 12px;
+    padding: 25px;
     .made-by, .partners {
       width: 100%;
       margin: 15px 0px;
-      clear: both; 
+      clear: both;
     }
   }
 

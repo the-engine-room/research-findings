@@ -31,6 +31,13 @@
   box-sizing: border-box;
   line-height: 180%;
 }
+a {
+  color: #380497;
+  outline: 0;
+}
+a:visited {
+  color: #380497;
+}
 /** Body **/
 html,
 body {
@@ -348,6 +355,17 @@ footer .logo-label {
   ::before {
     line-height: 140%;
   }
+  div.container {
+    margin: 0px 0px 0px 0px;
+    width: 95%;
+    text-align: left;
+  }
+  h1 {
+    font-family: "Sintony", sans-serif;
+    font-weight: bold;
+    color: #380497;
+    font-size: 24px;
+  }
   div.container > header,
   .message {
     height: auto;
@@ -355,9 +373,23 @@ footer .logo-label {
   }
   div.container > header a.see-all-content {
     position: relative;
+    bottom: 0px;
+    right: 0px;
+    display: block;
+    float: right;
+  }
+  .message article header h2 {
+    font-size: 22px;
+    height: auto;
   }
   .message article .content {
-    width: calc(100% - 72px);
+    width: calc(100% - 36px);
+    margin-right: 0px;
+    padding-right: 0px;
+  }
+  footer {
+    font-size: 12px;
+    padding: 25px;
   }
   footer .made-by,
   footer .partners {
