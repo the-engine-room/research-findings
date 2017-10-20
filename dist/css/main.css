@@ -259,6 +259,9 @@ footer .made-by .license {
 footer .made-by .license a {
   color: #000073;
 }
+footer .made-by .license .cc {
+  max-width: 80px;
+}
 footer .partners {
   width: 58%;
   display: block;
@@ -285,6 +288,9 @@ footer .partners .logo_3 {
   padding: 0px 15px;
   text-align: center;
 }
+footer .partners .logo_3 a {
+  width: 100%;
+}
 footer .partners .logo_3 img {
   height: auto;
   max-width: 100%;
@@ -295,6 +301,9 @@ footer .partners .logo_4 {
   float: left;
   padding: 0px 15px;
   text-align: center;
+}
+footer .partners .logo_4 a {
+  width: 100%;
 }
 footer .partners .logo_4 img {
   height: auto;
