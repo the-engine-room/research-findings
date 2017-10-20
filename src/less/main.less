@@ -184,7 +184,7 @@ div.container > header {
           float: right;
           background: @violet;
           clear: both;
-          margin-top: 28px;
+          margin-top: 30px;
           left: 0;
           position: absolute;
         }
@@ -209,6 +209,14 @@ div.container > header {
         .clearsans;
         color: @violet;
         text-decoration: underline;
+        &:after {
+          content: ' ';
+          width: 16px;
+          height: 16px;
+          background: transparent url("../assets/external.png") no-repeat center center;
+          display: inline-block;
+
+        }
       }
     }
   }

@@ -218,7 +218,7 @@ div.container > header .see-all-content:after {
   float: right;
   background: #380497;
   clear: both;
-  margin-top: 28px;
+  margin-top: 30px;
   left: 0;
   position: absolute;
 }
@@ -244,6 +244,13 @@ div.container > header .see-all-content:after {
   font-family: "Clear Sans Regular", sans-serif;
   color: #380497;
   text-decoration: underline;
+}
+.message article .content a.research-link:after {
+  content: ' ';
+  width: 16px;
+  height: 16px;
+  background: transparent url("../assets/external.png") no-repeat center center;
+  display: inline-block;
 }
 footer {
   font-family: "Clear Sans Regular", sans-serif;
