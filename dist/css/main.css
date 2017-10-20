@@ -210,10 +210,10 @@ div.container > header .see-all-content:after {
   background: transparent;
 }
 .message article .content .toggle:hover {
-  color: #000073;
+  color: #007FFF;
 }
 .message article .content .toggle:hover:after {
-  background: #000073;
+  background: #007FFF;
 }
 .message article .content .hilite {
   font-family: "Clear Sans Bold", sans-serif;
