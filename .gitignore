@@ -2,6 +2,9 @@
 logs
 *.log
 
+# Robots file 
+robots.txt
+
 # Dependency directories
 node_modules/
 jspm_packages/
