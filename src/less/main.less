@@ -8,7 +8,7 @@
   line-height: 180%;
 }
 
-a { color: @violet; outline: 0; 
+a { color: @violet; outline: 0;
   &:visited { color: @violet; }
 }
 /** Body **/
@@ -29,13 +29,18 @@ h1, h2, h3, h4 {
 }
 h1 {
   .sintony;
-  color: @violet;
+  background-color: @violet;
+  color: @back;
   font-size: 36px;
+  line-height: 150%;
+}
+h1 > br {
+  line-height: 100%;
 }
 p.tagline {
   .clearsans;
   color: @violet;
-  font-size: 18px;
+  font-size: 16px;
 }
 h2 { .clearsans-bold; }
 
@@ -43,9 +48,10 @@ h2 { .clearsans-bold; }
 /** Sections **/
 div.container > header {
   margin-top: 43px;
-  height: ~"calc(100vw / 3)";
+  height: ~"calc(100vw / 5)";
   min-height: 250px;
   position: relative;
+  /*
   &:before {
     content: ' ';
     font-size: 1px;
@@ -55,8 +61,9 @@ div.container > header {
     background: @blue;
     height: ~"calc(100vw / 4)";
   }
-
-  h1, p.tagline {
+  */
+  h2 { color: @purple; }
+  h1, h2, p.tagline {
     padding: 0px 27px;
   }
   .see-all-content {
@@ -83,7 +90,7 @@ div.container > header {
 
 .message {
   height: auto;
-  min-height: ~"calc(100vw / 2)";
+  min-height: ~"calc(100vw / 8)";
 //  min-height: 250px;
   position: relative;
   article {
@@ -109,33 +116,33 @@ div.container > header {
         width: 36px;
         font-size: 36px;
         float: left;
-        height: 86px;
-        padding-top: 29px;
+      //  height: 86px;
+      //  padding-top: 29px;
         .sintony;
         color: @blue;
       }
       h2 {
         .sintony;
         color: @blue;
-        font-size: 24px;
+        font-size: 36px;
         width: ~"calc(100% - 36px)";
         float: left;
-        height: 86px;
+        // height: 86px;
         margin-bottom: 0px;
-
+        vertical-align: bottom;
       }
     }
     .content {
       position: relative;
       display: block;
       float: left;
-      width: ~"calc(50% - 72px)";
+      width: ~"calc(100% - 72px)";
       padding: 15px 18px;
       margin: 0px 36px;
       color: @purple;
       .clearsans;
       .transition;
-      &:before {
+      /*&:before {
         .transition;
         height: 0px;
         width: 6px;
@@ -157,7 +164,7 @@ div.container > header {
         left: 0px;
         top: 15px;
       }
-
+      */
 
       .text p {
         padding-left: 15px;
@@ -174,12 +181,13 @@ div.container > header {
 
       .toggle {
         .sintony;
-        color: @violet;
+        background: @violet;
+        color: @back;
         font-size: 18px;
         position: relative;
         text-decoration: none;
         .transition;
-        &:after {
+      /*  &:after {
           .shortline-hr;
           content: ' ';
           height: 6px;
@@ -195,8 +203,10 @@ div.container > header {
           width: 0px;
           background: transparent;
         }
+        */
         &:hover {
           color: @blue;
+          background: @back;
           &:after {
             background: @blue;
           }
@@ -211,6 +221,7 @@ div.container > header {
         .clearsans;
         color: @violet;
         text-decoration: underline;
+        /*
         &:after {
           content: ' ';
           width: 16px;
@@ -219,6 +230,7 @@ div.container > header {
           display: inline-block;
 
         }
+        */
       }
     }
   }

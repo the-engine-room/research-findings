@@ -59,13 +59,18 @@ h4 {
 h1 {
   font-family: "Sintony", sans-serif;
   font-weight: bold;
-  color: #380497;
+  background-color: #380497;
+  color: #FFF7FF;
   font-size: 36px;
+  line-height: 150%;
+}
+h1 > br {
+  line-height: 100%;
 }
 p.tagline {
   font-family: "Clear Sans Regular", sans-serif;
   color: #380497;
-  font-size: 18px;
+  font-size: 16px;
 }
 h2 {
   font-family: "Clear Sans Bold", sans-serif;
@@ -73,20 +78,26 @@ h2 {
 /** Sections **/
 div.container > header {
   margin-top: 43px;
-  height: calc(100vw / 3);
+  height: calc(100vw / 5);
   min-height: 250px;
   position: relative;
+  /*
+  &:before {
+    content: ' ';
+    font-size: 1px;
+    display: block;
+    float: left;
+    width: 6px;
+    background: @blue;
+    height: ~"calc(100vw / 4)";
+  }
+  */
 }
-div.container > header:before {
-  content: ' ';
-  font-size: 1px;
-  display: block;
-  float: left;
-  width: 6px;
-  background: #007FFF;
-  height: calc(100vw / 4);
+div.container > header h2 {
+  color: #000073;
 }
 div.container > header h1,
+div.container > header h2,
 div.container > header p.tagline {
   padding: 0px 27px;
 }
@@ -113,7 +124,7 @@ div.container > header .see-all-content:after {
 }
 .message {
   height: auto;
-  min-height: calc(100vw / 2);
+  min-height: calc(100vw / 8);
   position: relative;
 }
 .message article {
@@ -141,8 +152,6 @@ div.container > header .see-all-content:after {
   width: 36px;
   font-size: 36px;
   float: left;
-  height: 86px;
-  padding-top: 29px;
   font-family: "Sintony", sans-serif;
   font-weight: bold;
   color: #007FFF;
@@ -151,17 +160,17 @@ div.container > header .see-all-content:after {
   font-family: "Sintony", sans-serif;
   font-weight: bold;
   color: #007FFF;
-  font-size: 24px;
+  font-size: 36px;
   width: calc(100% - 36px);
   float: left;
-  height: 86px;
   margin-bottom: 0px;
+  vertical-align: bottom;
 }
 .message article .content {
   position: relative;
   display: block;
   float: left;
-  width: calc(50% - 72px);
+  width: calc(100% - 72px);
   padding: 15px 18px;
   margin: 0px 36px;
   color: #000073;
@@ -169,32 +178,29 @@ div.container > header .see-all-content:after {
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
-}
-.message article .content:before {
-  -webkit-transition: all 0.5s ease 0s;
-  -moz-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
-  height: 0px;
-  width: 6px;
-  background: transparent;
-  position: absolute;
-  display: block;
-  left: 0px;
-  top: 15px;
-  content: ' ';
-}
-.message article .content.shown:before {
-  -webkit-transition: all 0.5s ease 0s;
-  -moz-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
-  height: calc(25vw / 3);
-  width: 6px;
-  content: ' ';
-  background: #380497;
-  position: absolute;
-  display: block;
-  left: 0px;
-  top: 15px;
+  /*&:before {
+        .transition;
+        height: 0px;
+        width: 6px;
+        background: transparent;
+        position: absolute;
+        display: block;
+        left: 0px;
+        top: 15px;
+        content: ' ';
+      }
+      &.shown:before {
+        .transition;
+        .shortline-vr;
+        width: 6px;
+        content: ' ';
+        background: @violet;
+        position: absolute;
+        display: block;
+        left: 0px;
+        top: 15px;
+      }
+      */
 }
 .message article .content .text p {
   padding-left: 15px;
@@ -210,34 +216,35 @@ div.container > header .see-all-content:after {
 .message article .content .toggle {
   font-family: "Sintony", sans-serif;
   font-weight: bold;
-  color: #380497;
+  background: #380497;
+  color: #FFF7FF;
   font-size: 18px;
   position: relative;
   text-decoration: none;
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
-}
-.message article .content .toggle:after {
-  width: calc(25vw / 3);
-  content: ' ';
-  height: 6px;
-  float: right;
-  background: #380497;
-  clear: both;
-  margin-top: 30px;
-  left: 0;
-  position: absolute;
-}
-.message article .content .toggle.toggle-clear:after {
-  -webkit-transition: all 0.5s ease 0s;
-  -moz-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
-  width: 0px;
-  background: transparent;
+  /*  &:after {
+          .shortline-hr;
+          content: ' ';
+          height: 6px;
+          float: right;
+          background: @violet;
+          clear: both;
+          margin-top: 30px;
+          left: 0;
+          position: absolute;
+        }
+        &.toggle-clear:after {
+          .transition;
+          width: 0px;
+          background: transparent;
+        }
+        */
 }
 .message article .content .toggle:hover {
   color: #007FFF;
+  background: #FFF7FF;
 }
 .message article .content .toggle:hover:after {
   background: #007FFF;
@@ -251,13 +258,16 @@ div.container > header .see-all-content:after {
   font-family: "Clear Sans Regular", sans-serif;
   color: #380497;
   text-decoration: underline;
-}
-.message article .content a.research-link:after {
-  content: ' ';
-  width: 16px;
-  height: 16px;
-  background: transparent url("../assets/external.png") no-repeat center center;
-  display: inline-block;
+  /*
+        &:after {
+          content: ' ';
+          width: 16px;
+          height: 16px;
+          background: transparent url("../assets/external.png") no-repeat center center;
+          display: inline-block;
+
+        }
+        */
 }
 footer {
   font-family: "Clear Sans Regular", sans-serif;

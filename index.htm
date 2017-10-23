@@ -15,20 +15,22 @@
     <div class="container">
       <header>
         <h1>A lot of organisations have a secret.<br />Their tech projects are failing&hellip;<br />and they know it.</h1>
+        <h2>What do we know?</h2>
         <p class="tagline">
           In 2013-17, the <a href="http://www.makingallvoicescount.org/" target="_blank" rel="noreferrer">Making All Voices Count (MAVC)</a> programme produced around 70 <a href="http://www.makingallvoicescount.org/publication/" target="_blank" rel="noreferrer">research reports, practice papers and journal articles</a> on how organisations are using technology for transparency and accountability.<br> What did they say?
         </p>
-        <a href="#" class="see-all-content">See all content</a>
+
       </header>
 
       <section class="message">
         <article>
           <header>
-            <div class="counter">1</div>
+
             <h2>
-              Organisations are too optimistic<br /> about how tech can help them.
-              <a class="tweet-this" target="_blank" rel="" href="https://twitter.com/intent/tweet?text=Organisations are too optimistic about how tech can help their projects. Read the evidence from @AllVoicesCount at: https://researchfindings.tech"><img src="dist/assets/twitter.png" alt="tweet this"></a>
+              <span class="counter">1</span>
+              Organisations are too optimistic about how tech can help them.<br />
             </h2>
+            <a  class="twitter-share-button" data-show-count="false" href="https://twitter.com/intent/tweet?text=Organisations are too optimistic about how tech can help their projects. Read the evidence from @AllVoicesCount at: https://researchfindings.tech"><img src="dist/assets/twitter.png" alt="tweet this"></a>
           </header>
           <div class="content" id="prove-it-1">
             <a href="#pi1" class="toggle">Where's the evidence?</a>
@@ -229,5 +231,21 @@
 
     <script src="dist/vendor/jquery.min.js"></script>
     <script src="dist/js/research-findings.min.js"></script>
+    <script>window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
+
+      return t;
+    }(document, "script", "twitter-wjs"));</script>
   </body>
 </html>
