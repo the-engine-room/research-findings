@@ -5,7 +5,7 @@
 /** Main rules **/
 *, ::after, ::before {
   box-sizing: border-box;
-  line-height: 180%;
+//  line-height: 180%;
 }
 
 a { color: @violet; outline: 0;
@@ -33,14 +33,19 @@ h1 {
   color: @back;
   font-size: 36px;
   line-height: 150%;
+
 }
 h1 > br {
   line-height: 100%;
+  & ~ br {
+    line-height: 60%;
+  }
 }
 p.tagline {
   .clearsans;
   color: @violet;
   font-size: 16px;
+  line-height: 130%;
 }
 h2 { .clearsans-bold; }
 
@@ -63,10 +68,13 @@ div.container > header {
   }
   */
   h2 { color: @purple; }
-  h1, h2, p.tagline {
+  h1 {
+    padding: 30px 27px;
+  }
+  h2, p.tagline {
     padding: 0px 27px;
   }
-  .see-all-content {
+  /* .see-all-content {
     color: @blue;
     font-size: 18px;
     position: absolute;
@@ -85,14 +93,32 @@ div.container > header {
       right: 0;
       position: absolute;
     }
+  } */
+}
+.messages {
+  counter-reset: messages;
+  list-style: none;
+  padding: 0px; margin: 0px;
+  & li:before {
+    content: counter(messages);
+    counter-increment: messages;
+    display: block;
+    float: left;
+    clear: left;
+    font-size: 36px;
+    min-width: 28px;
+    .sintony;
+    color: @blue;
+    margin-left: 27px;
+    line-height: 140%;
   }
 }
-
 .message {
   height: auto;
   min-height: ~"calc(100vw / 8)";
-//  min-height: 250px;
   position: relative;
+  float: left;
+  width: ~"calc(100% - 55px)";
   article {
     clear: both;
     &:after, &:before {
@@ -120,16 +146,19 @@ div.container > header {
       //  padding-top: 29px;
         .sintony;
         color: @blue;
+        line-height: normal;
       }
       h2 {
         .sintony;
         color: @blue;
         font-size: 36px;
-        width: ~"calc(100% - 36px)";
+        padding-left: 12px;
+        // width: ~"calc(100% - 36px)";
         float: left;
         // height: 86px;
         margin-bottom: 0px;
         vertical-align: bottom;
+        line-height: 130%;
       }
     }
     .content {
@@ -168,7 +197,7 @@ div.container > header {
 
       .text p {
         padding-left: 15px;
-        text-indent: -15px;
+        //text-indent: -15px;
         //margin-left: 20px;
         margin-right: 30px;
         &::first-line {
@@ -242,11 +271,16 @@ footer {
   color: @purple;
   text-align: left;
   font-size: 18px;
-  border-top: 6px solid @blue;
+  // border-top: 6px solid @blue;
+  background: #dedede;
   padding: 25px 50px;
   display: block;
   clear: both;
-  margin-top: 30px;
+  margin-top: 80px;
+  &:after {
+    content: ' ';
+    display: block; clear: both;
+  }
   .made-by {
     width: 33%;
     margin-right: 9%;
@@ -319,6 +353,9 @@ footer {
     margin: 15px 0px;
     clear: both;
   }
+}
+.tweet-this img {
+  width: 36px; height: 36px; margin-left: 12px;
 }
 
 @import "mobile";
