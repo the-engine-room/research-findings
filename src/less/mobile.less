@@ -5,17 +5,21 @@
 
   div.container {
     margin: 0px 0px 0px 0px;
-    width: 95%;
+    width: 100%;
     text-align: left;
   }
   h1 {
     .sintony;
-    color: @violet;
+    color: @back;
     font-size: 24px;
   }
+  div.container > header {
+    margin: 0px;
+  }
+
   div.container > header, .message {
     height: auto;
-    min-height: 100vh;
+    min-height: 70vh;
   }
   div.container > header a.see-all-content {
     position: relative;
@@ -23,6 +27,20 @@
     right: 0px;
     display: block; float: right;
   }
+  .messages li:before {
+    content: counter(messages);
+    counter-increment: messages;
+    display: block;
+    float: left;
+    clear: left;
+    font-size: 36px;
+    min-width: 28px;
+    .sintony;
+    color: @blue;
+    margin-left: 27px;
+    line-height: 140%;
+  }
+
   .message article header h2 {
     font-size: 22px;
     height: auto;

@@ -81,8 +81,7 @@ h2 {
 /** Sections **/
 div.container > header {
   margin-top: 43px;
-  height: calc(100vw / 5);
-  min-height: 250px;
+  min-height: 390px;
   position: relative;
   /*
   &:before {
@@ -404,19 +403,22 @@ footer .logo-label {
   }
   div.container {
     margin: 0px 0px 0px 0px;
-    width: 95%;
+    width: 100%;
     text-align: left;
   }
   h1 {
     font-family: "Sintony", sans-serif;
     font-weight: bold;
-    color: #380497;
+    color: #FFF7FF;
     font-size: 24px;
+  }
+  div.container > header {
+    margin: 0px;
   }
   div.container > header,
   .message {
     height: auto;
-    min-height: 100vh;
+    min-height: 70vh;
   }
   div.container > header a.see-all-content {
     position: relative;
@@ -424,6 +426,20 @@ footer .logo-label {
     right: 0px;
     display: block;
     float: right;
+  }
+  .messages li:before {
+    content: counter(messages);
+    counter-increment: messages;
+    display: block;
+    float: left;
+    clear: left;
+    font-size: 36px;
+    min-width: 28px;
+    font-family: "Sintony", sans-serif;
+    font-weight: bold;
+    color: #007FFF;
+    margin-left: 27px;
+    line-height: 140%;
   }
   .message article header h2 {
     font-size: 22px;
