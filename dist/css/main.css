@@ -31,17 +31,17 @@
   box-sizing: border-box;
 }
 a {
-  color: #380497;
+  color: #8371E5;
   outline: 0;
 }
 a:visited {
-  color: #380497;
+  color: #8371E5;
 }
 /** Body **/
 html,
 body {
   text-align: center;
-  background: #FFF7FF;
+  background: #F3EFFE;
 }
 div.container {
   margin: 0px 15% 0px 10%;
@@ -59,7 +59,7 @@ h1 {
   font-family: "Sintony", sans-serif;
   font-weight: bold;
   background-color: #380497;
-  color: #FFF7FF;
+  color: #F3EFFE;
   font-size: 36px;
   line-height: 150%;
 }
@@ -71,9 +71,19 @@ h1 > br ~ br {
 }
 p.tagline {
   font-family: "Clear Sans Regular", sans-serif;
-  color: #380497;
+  color: white;
   font-size: 16px;
   line-height: 130%;
+  background: #007FFF;
+  margin: 0px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+p.tagline a {
+  color: white;
+}
+p.tagline a:visited {
+  color: white;
 }
 h2 {
   font-family: "Clear Sans Bold", sans-serif;
@@ -92,6 +102,7 @@ div.container > header {
     width: 6px;
     background: @blue;
     height: ~"calc(100vw / 4)";
+
   }
   */
   /* .see-all-content {
@@ -120,10 +131,15 @@ div.container > header h2 {
 }
 div.container > header h1 {
   padding: 30px 27px;
+  margin-bottom: 0px;
 }
 div.container > header h2,
 div.container > header p.tagline {
   padding: 0px 27px;
+}
+div.container > header p.tagline {
+  padding: 27px 27px;
+  margin-bottom: 30px;
 }
 .messages {
   counter-reset: messages;
@@ -243,7 +259,7 @@ div.container > header p.tagline {
   font-family: "Sintony", sans-serif;
   font-weight: bold;
   background: #380497;
-  color: #FFF7FF;
+  color: #F3EFFE;
   font-size: 18px;
   position: relative;
   text-decoration: none;
@@ -270,7 +286,7 @@ div.container > header p.tagline {
 }
 .message article .content .toggle:hover {
   color: #007FFF;
-  background: #FFF7FF;
+  background: #F3EFFE;
 }
 .message article .content .toggle:hover:after {
   background: #007FFF;
@@ -300,7 +316,7 @@ footer {
   color: #000073;
   text-align: left;
   font-size: 18px;
-  background: #dedede;
+  background: #F1F1F5;
   padding: 25px 50px;
   display: block;
   clear: both;
@@ -409,7 +425,7 @@ footer .logo-label {
   h1 {
     font-family: "Sintony", sans-serif;
     font-weight: bold;
-    color: #FFF7FF;
+    color: #F3EFFE;
     font-size: 24px;
   }
   div.container > header {

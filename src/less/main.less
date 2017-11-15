@@ -8,8 +8,8 @@
 //  line-height: 180%;
 }
 
-a { color: @violet; outline: 0;
-  &:visited { color: @violet; }
+a { color: @links; outline: 0;
+  &:visited { color: @links; }
 }
 /** Body **/
 html, body {
@@ -34,6 +34,7 @@ h1 {
   font-size: 36px;
   line-height: 150%;
 
+
 }
 h1 > br {
   line-height: 100%;
@@ -43,10 +44,21 @@ h1 > br {
 }
 p.tagline {
   .clearsans;
-  color: @violet;
+  color: white;
   font-size: 16px;
   line-height: 130%;
+  background: @blue;
+  margin: 0px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  a {
+    color: white;
+    &:visited {
+      color: white;
+    }
+  }
 }
+
 h2 { .clearsans-bold; }
 
 
@@ -65,14 +77,20 @@ div.container > header {
     width: 6px;
     background: @blue;
     height: ~"calc(100vw / 4)";
+
   }
   */
   h2 { color: @purple; }
   h1 {
     padding: 30px 27px;
+    margin-bottom: 0px;
   }
   h2, p.tagline {
     padding: 0px 27px;
+  }
+  p.tagline {
+    padding: 27px 27px;
+    margin-bottom: 30px;
   }
   /* .see-all-content {
     color: @blue;
@@ -272,7 +290,7 @@ footer {
   text-align: left;
   font-size: 18px;
   // border-top: 6px solid @blue;
-  background: #dedede;
+  background: @footerback;
   padding: 25px 50px;
   display: block;
   clear: both;
