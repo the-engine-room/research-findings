@@ -3,8 +3,7 @@ $(document).ready(function(){
   var ResearchFindings = {
 
     init: function(){
-      this.displayText();
-      this.seeAllContent();
+      this.displayText();      
     },
 
     displayText: function() {
