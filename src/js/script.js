@@ -10,22 +10,18 @@ $(document).ready(function(){
     displayText: function() {
       $('.toggle').click(function(e){
         e.preventDefault();
-        $(this).next('.text').removeClass('hidden');
-        $(this).addClass('toggle-clear');
-        $(this).parent('.content').addClass('shown');
+        if( $(this).parent('.content').hasClass('shown') ){
+          $(this).next('.text').addClass('hidden');
+          $(this).removeClass('toggle-clear');
+          $(this).parent('.content').removeClass('shown');
+        } else {
+          $(this).next('.text').removeClass('hidden');
+          $(this).addClass('toggle-clear');
+          $(this).parent('.content').addClass('shown');
+        }
+
       });
     },
-
-    seeAllContent: function() {
-      $('.see-all-content').click(function(e){
-        console.log('Show All');
-        e.preventDefault();
-        $('.text').removeClass('hidden');
-        $('.toggle').addClass('toggle-clear');
-        $('.content').addClass('shown');
-      });
-    }
-
 
   }
 

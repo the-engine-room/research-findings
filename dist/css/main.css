@@ -248,12 +248,12 @@ div.container > header p.tagline {
 .message article .content .text p {
   padding-left: 15px;
   margin-right: 30px;
-}
-.message article .content .text p::first-line {
-  font-family: "Clear Sans Bold", sans-serif;
-  padding-left: 0px;
-  display: inline-block;
-  margin-right: 0px;
+  /*&::first-line {
+          .clearsans-bold;
+          padding-left: 0px;
+          display: inline-block;
+          margin-right: 0px;
+        }*/
 }
 .message article .content .toggle {
   font-family: "Sintony", sans-serif;
@@ -292,7 +292,6 @@ div.container > header p.tagline {
   background: #007FFF;
 }
 .message article .content .hilite {
-  font-family: "Clear Sans Bold", sans-serif;
   line-height: 150%;
   margin-top: 10px;
 }
